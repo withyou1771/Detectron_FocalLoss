@@ -57,7 +57,7 @@ img_path = ''
 
 (7)test one model
 
-CUDA_VISIBLE_DEVICES=0 python2 tools/test_net.py --cfg det_logo_all/publish_logo_6_faster_rcnn_R-50-FPN_fl.yaml TEST.WEIGHTS 
+CUDA_VISIBLE_DEVICES=0 python2 tools/test_net.py --cfg experiments/faster_rcnn_R-50-FPN_Focalloss.yaml TEST.WEIGHTS 
 
 output/train/yourdata/generalized_rcnn/model_final.pkl NUM_GPUS 1
 
