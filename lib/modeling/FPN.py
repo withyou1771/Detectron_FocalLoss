@@ -506,7 +506,7 @@ def add_fpn_focal_losses(model):
                 cfg.TRAIN.IMS_PER_BATCH
 
             ),
-            num_classes =2
+            num_classes = cfg.MODEL.NUM_CLASSES - 1
 
         )
 
