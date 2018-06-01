@@ -500,7 +500,7 @@ def add_fpn_focal_losses(model):
             ['loss_rpn_cls_fpn' + slvl],
 
             gamma=cfg.FOCAL_LOSS.LOSS_GAMMA,
-            alpha=-cfg.FOCAL_LOSS.LOSS_ALPHA,
+            alpha=cfg.FOCAL_LOSS.LOSS_ALPHA,
             scale=(
                 model.GetLossScale() / cfg.TRAIN.RPN_BATCH_SIZE_PER_IM /
                 cfg.TRAIN.IMS_PER_BATCH
