@@ -1,5 +1,5 @@
 # Detectron_FocalLoss
-add focal loss to fpn
+add focal loss to rpn
 # install caffe2
 https://github.com/caffe2/caffe2
 # install Detectron_FocalLoss
