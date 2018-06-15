@@ -1,9 +1,14 @@
 # Detectron_FocalLoss
 I add focal loss to rpn.But the effect is not good..
-It defaults to close.If you don't want to use focal loss to rpn, you can ignore it
+
+It defaults to close.
+
+If you don't want to use focal loss to rpn, you can ignore it
+
 
 
 I add focal loss to fast_rcnn(lib/modeling/fast_rcnn_heads_fl.py).But it's not work.
+
 I'm confused about it.Welcome to communicate with me~
 # install caffe2
 https://github.com/caffe2/caffe2
