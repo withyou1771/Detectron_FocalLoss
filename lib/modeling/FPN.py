@@ -495,8 +495,10 @@ def add_fpn_focal_losses(model):
     # ==========================================================================
     for lvl in range(cfg.FPN.RPN_MIN_LEVEL, cfg.FPN.RPN_MAX_LEVEL + 1):
         slvl = str(lvl)
+        # ['rpn_cls_logits_fpn' + slvl, 'rpn_labels_int32_fpn' + slvl],
+        # 'loss_rpn_cls_fpn' + slvl,
         loss_rpn_cls_fpn = model.net.SigmoidFocalLoss(
-            ['rpn_cls_logits_fpn' + slvl, 'rpn_labels_int32_fpn' + slvl, 'rpn_cls_probs_fpn' + slvl],
+            ['rpn_cls_logits_fpn' + slvl, 'rpn_labels_int32_fpn' + slvl, 'fpn_fg_num'],
             ['loss_rpn_cls_fpn' + slvl],
 
             gamma=cfg.FOCAL_LOSS.LOSS_GAMMA,
@@ -506,7 +508,7 @@ def add_fpn_focal_losses(model):
                 cfg.TRAIN.IMS_PER_BATCH
 
             ),
-            num_classes = cfg.MODEL.NUM_CLASSES - 1
+            num_classes=cfg.MODEL.NUM_CLASSES - 1
 
         )
 
